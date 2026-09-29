@@ -6,15 +6,24 @@ using namespace std;
 
 int main() {
     // Write C++ code here
-    int n=50;
-    int sum=0;
+    int n=19;
+    
+    
+    for(int i=1;i<100;i++){
+        int sum=0;
     int product=1;
-    while(n!=0){
-        sum=sum+n%10;
-        product=product*n%10;
+        int original=i;
+    while(original!=0){
+        sum=sum+original%10;
+        product=product*(original%10);
+        original/=10;
         
     }
-    if(sum+product==n)cout<<"special";
+  
+    if(sum+product==i)cout<<"special "<<i<<endl;
+    
+}
+    
     
 
     cout << "Try clicking the Run button.";
